@@ -26,9 +26,7 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="max-w-2xl"
             >
-              <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-secondary/10 text-secondary font-semibold text-sm tracking-wide">
-                NUEVA COLECCIÓN 2024 DISPONIBLE
-              </div>
+            
               <h1 className="font-display font-extrabold text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-foreground mb-6">
                 Tu salud visual con <span className="text-primary">estilo propio</span>.
               </h1>
@@ -65,16 +63,7 @@ export default function Home() {
                   className="relative rounded-[2.5rem] shadow-2xl w-full h-auto object-cover aspect-[4/5]"
                 />
                 
-                {/* Floating Badge */}
-                <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-gray-100 flex items-center gap-3 animate-bounce-slow">
-                  <div className="bg-green-100 p-2 rounded-full">
-                    <Clock className="w-6 h-6 text-green-600" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-muted-foreground font-semibold">HORARIO HOY</p>
-                    <p className="text-sm font-bold text-foreground">Abierto hasta las 13:30</p>
-                  </div>
-                </div>
+                
               </div>
             </motion.div>
           </div>
@@ -149,7 +138,7 @@ export default function Home() {
               className="group relative overflow-hidden rounded-3xl aspect-[3/4]"
             >
               <img 
-                src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=800&auto=format&fit=crop" 
+                src="https://plus.unsplash.com/premium_photo-1661301078590-170d62793b56?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                 alt="Gafas de sol" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -170,7 +159,7 @@ export default function Home() {
               className="group relative overflow-hidden rounded-3xl aspect-[3/4] md:-mt-12"
             >
               <img 
-                src="https://images.unsplash.com/photo-1577803645773-f96470509666?q=80&w=800&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1556306510-31ca015374b0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                 alt="Gafas graduadas" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -191,7 +180,7 @@ export default function Home() {
               className="group relative overflow-hidden rounded-3xl aspect-[3/4]"
             >
               <img 
-                src="https://images.unsplash.com/photo-1589578228447-e1a4e481c6c8?q=80&w=800&auto=format&fit=crop" 
+                src="https://plus.unsplash.com/premium_photo-1661608009424-729d98a192a1?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                 alt="Gafas infantiles" 
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
