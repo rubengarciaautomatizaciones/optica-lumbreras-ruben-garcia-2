@@ -1,0 +1,84 @@
+Actúa como un Senior Frontend Architect y Lead UX Designer experto en React, Vite, Tailwind CSS y Framer Motion.
+
+Tu tarea es construir una Landing Page de alto impacto para "OPTICA LUMBRERAS", un negocio local en Puerto Lumbreras (Murcia). La web debe ser una demostración para el cliente, por lo que el diseño debe ser impecable ("Awwwards level").
+
+### 1. IDENTIDAD VISUAL Y PSICOLOGÍA DEL COLOR (ESTRICTO)
+La marca tiene una identidad "Retro-Pop" vibrante. Debemos equilibrar la "Vitalidad" con la "Confianza Clínica".
+- **Fondo General:** Blanco Puro (#FFFFFF) para máxima legibilidad y polaridad positiva.
+- **Color Principal (Acción/CTA):** Rojo Vibrante (#FF2E43). Úsalo en el botón principal. Crea sensación de urgencia y visibilidad.
+- **Colores Secundarios (Decoración/Ondas):** Naranja (#FF9F1C), Rosa (#FF99C8) y Amarillo Mostaza (#FFC300). Úsalos para degradados, iconos y ondas decorativas separadoras entre secciones.
+- **Texto:** Gris Oscuro (#1F2937) para lectura cómoda (no usar negro puro en párrafos).
+- **Tipografía:**
+  - Títulos: 'Outfit', sans-serif (Geométrica, moderna, con personalidad).
+  - Cuerpo: 'Inter', sans-serif (Legibilidad técnica).
+- **Estilo:** Usa sombras suaves (`shadow-lg`), bordes redondeados (`rounded-2xl`) y separadores de sección con formas orgánicas/onduladas (SVG waves) para imitar la estética de ondas de la marca.
+
+### 2. LOGOTIPO (SIN IMAGEN)
+No tenemos el archivo del logo. Crea un componente <Logo /> que renderice el texto "OPTICA LUMBRERAS" con tipografía 'Outfit' en negrita (Bold).
+- La palabra "OPTICA" en color Rojo (#FF2E43).
+- La palabra "LUMBRERAS" en Naranja (#FF9F1C).
+- Añade un icono de ojo estilizado (usando Lucide React) al lado.
+
+### 3. ESTRUCTURA Y COPYWRITING (ESPAÑOL DE ESPAÑA)
+Usa un tono cercano, profesional y persuasivo. PROHIBIDO usar "Lorem Ipsum".
+
+**A. NAVBAR:**
+- Logo a la izquierda.
+- Links: Inicio, Servicios, Colecciones, Contacto.
+- CTA Principal: "Pedir Cita" (Botón sólido rojo).
+
+**B. HERO SECTION:**
+- Titular (H1): "Tu salud visual con estilo propio en Puerto Lumbreras"
+- Subtítulo: "Expertos en optometría clínica y las últimas tendencias en moda visual. Cuidamos de tus ojos mientras realzamos tu mirada."
+- Botones:
+  1. "Llamar Ahora" (Principal, con icono de teléfono).
+  2. "Ver Colección" (Secundario, outline).
+- Imagen: Placeholder de Unsplash mostrando a alguien feliz con gafas modernas (keywords: "glasses smile woman sunny").
+- Decoración: Añade una "onda" visual en la parte inferior del Hero usando los colores de la marca.
+
+**C. SERVICIOS DESTACADOS (Grid de 4 Tarjetas):**
+"Nuestra experiencia clínica a tu servicio"
+1. **Examen Visual Completo:** Graduación precisa con tecnología de última generación.
+2. **Contactología Avanzada:** Adaptación de lentes de contacto para todo tipo de ojo.
+3. **Tensión Ocular:** Prevención y control del glaucoma y salud retiniana.
+4. **Asesoramiento Estético:** Te ayudamos a encontrar la montura que mejor encaja con tu rostro.
+*Usa iconos Lucide React apropiados para cada uno (Eye, Glasses, ScanEye, Smile).*
+
+**D. COLECCIONES (Masonry o Slider):**
+"Las mejores marcas, el mejor estilo"
+- Muestra 3-4 tarjetas con fotos de gafas (Sol y Graduado).
+- Copy breve sobre materiales de calidad y diseño.
+
+**E. UBICACIÓN Y HORARIOS (CRÍTICO):**
+- Layout: 2 Columnas.
+- Columna 1: Información de contacto.
+  - Dirección: Calle Mably, 8, 30890 Puerto Lumbreras, Murcia.
+  - Horario: L-V: 10:00–13:30, 17:30–20:30 | Sáb: 10:00–13:30.
+  - Email: info@opticalumbreras.com (ficticio).
+- Columna 2: Placeholder visual de Mapa (o un iframe simulado estilizado).
+
+**F. FOOTER:**
+- Copyright 2024 Optica Lumbreras.
+- Enlaces legales básicos.
+
+**G. ELEMENTO FLOTANTE:**
+- Botón de WhatsApp fijo en la esquina inferior derecha. Color verde oficial de WhatsApp (#25D366). Animación suave de "palpitar".
+
+### 4. REQUISITOS TÉCNICOS (OBLIGATORIO)
+- **Stack:** React + Vite + Tailwind CSS.
+- **Iconos:** Lucide React.
+- **Animaciones:** Usa `framer-motion` para:
+  - `AnimatePresence` en transiciones.
+  - `motion.div` con `initial={{ opacity: 0, y: 20 }}` `whileInView={{ opacity: 1, y: 0 }}` para que los elementos aparezcan suavemente al hacer scroll.
+- **Mobile First:** Botones con padding generoso (min 44px touch target).
+- **Imágenes:** Usa `https://source.unsplash.com/random/800x600/?glasses` o similar para placeholders estables.
+
+### 5. CONFIGURACIÓN DE DEPLOY (IMPORTANTE)
+Al configurar el proyecto, crea SIEMPRE un archivo `vercel.json` en la raíz.
+Configuración exacta:
+```json
+{
+  "framework": "vite",
+  "outputDirectory": "dist",
+  "rewrites": [ { "source": "/(.*)", "destination": "/index.html" } ]
+}
